@@ -15,19 +15,30 @@ public class Teste {
 //        realizarSaque(contaSimples, 7); 
 //        System.out.println(contaSimples);
 
-        ContaPoupanca contaPoupanca = new ContaPoupanca("Pedro", 22222, 200);  
+//        ContaPoupanca contaPoupanca = new ContaPoupanca("Pedro", 22222, 200);  
+//        
+//        contaPoupanca.setDiaRendimento(28);
+//        
+//        if(contaPoupanca.calcularNovoSaldo(0.5)){
+//            System.out.println("Rendimento aplicado, novo saldo é de = " 
+//            + contaPoupanca.getSaldo());
+//        }
+//        else{
+//            System.out.println("Hoje não é dia de rendimento, novo saldo não calculado");
+//        }
+//        
+//        System.out.println(contaPoupanca);
+
+
+
+        ContaEspecial contaEspecial = new ContaEspecial("Fernando", 333333, 100);  
         
-        contaPoupanca.setDiaRendimento(28);
+        contaEspecial.setLimite(50);
         
-        if(contaPoupanca.calcularNovoSaldo(0.5)){
-            System.out.println("Rendimento aplicado, novo saldo é de = " 
-            + contaPoupanca.getSaldo());
-        }
-        else{
-            System.out.println("Hoje não é dia de rendimento, novo saldo não calculado");
-        }
+        realizarSaque(contaEspecial, 110);
         
-        System.out.println(contaPoupanca);
+        System.out.println(contaEspecial);
+        
 
     }
     

@@ -2,9 +2,9 @@ package loiane.Aula43.labs1;
 
 public class ContaBancaria {
     
-    protected String nomeCliente;
-    protected int numConta;
-    protected double saldo;
+    private String nomeCliente;
+    private int numConta;
+    private double saldo;
     
     public ContaBancaria(){}
     
