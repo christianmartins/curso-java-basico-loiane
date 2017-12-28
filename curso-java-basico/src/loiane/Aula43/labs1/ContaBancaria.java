@@ -15,13 +15,14 @@ public class ContaBancaria {
     }
     
     
-    public void sacar(double valor){  
+    public boolean sacar(double valor){  
         
-        if(valor <= saldo && saldo != 0)
+        if((saldo-valor) >= 0){
             saldo -= valor;
-        else
-            System.out.println("Não foi possivel sacar");
-        
+            return true;
+        }
+        //System.out.println("Não foi possivel sacar");
+        return false;   
     }
     
     public void depositar(double valor){
@@ -39,7 +40,7 @@ public class ContaBancaria {
     
    @Override
     public String toString(){
-        return "Nome da cliente: "+ nomeCliente +"\n" 
+        return "Nome do cliente: "+ nomeCliente +"\n" 
         +"Numero da conta: "+ numConta +"\n" 
         +"Saldo: "+ saldo;
     }

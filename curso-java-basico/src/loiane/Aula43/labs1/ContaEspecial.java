@@ -16,13 +16,14 @@ public class ContaEspecial extends ContaBancaria {
     
     
     @Override
-    public void sacar(double valor){  
+    public boolean sacar(double valor){  
         if(saldo <= 0 && valor < limite){
             chequeEspecial = true;
             saldo -= limite; 
-            limite -= valor;       
+            limite -= valor; 
+            return true;
         }  
-        else      
-            System.out.println("Não foi possivel usar o cheque especial"); 
+        //System.out.println("Não foi possivel usar o cheque especial"); 
+        return false;
     }
 }
